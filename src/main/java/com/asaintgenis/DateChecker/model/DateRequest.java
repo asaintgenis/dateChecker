@@ -1,7 +1,13 @@
 package com.asaintgenis.DateChecker.model;
 
+import javax.validation.constraints.NotEmpty;
+
 public class DateRequest {
+
+    @NotEmpty
     String pattern;
+
+    @NotEmpty
     String dateToParse;
 
     public DateRequest() {}
@@ -15,15 +21,7 @@ public class DateRequest {
         return pattern;
     }
 
-    public void setPattern(String pattern) {
-        this.pattern = pattern;
-    }
-
     public String getDateToParse() {
         return dateToParse;
-    }
-
-    public void setDateToParse(String dateToParse) {
-        this.dateToParse = dateToParse;
     }
 }
